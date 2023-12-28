@@ -142,66 +142,6 @@
     }
   </script>
 
-  <!-- Fungsi JavaScript untuk Komentar -->
-  <script>
-    var selectedName = ""; // Variable untuk menyimpan nama yang dipilih
-
-    // Memuat komentar dari local storage saat halaman dimuat
-    window.onload = function () {
-      loadComments();
-    };
-
-    function selectName() {
-      var nameInput = document.getElementById('nameInput');
-      selectedName = nameInput.value.trim();
-    }
-
-    function addComment() {
-      var commentInput = document.getElementById('commentInput');
-
-      var comment = commentInput.value.trim();
-
-      if (selectedName !== '' && comment !== '') {
-        var commentContainer = document.getElementById('comments');
-        var newComment = document.createElement('div');
-        newComment.className = 'comment';
-        newComment.innerHTML = '<strong>' + selectedName + ':</strong> ' + comment;
-        commentContainer.appendChild(newComment);
-
-        // Simpan komentar ke local storage
-        saveComment(selectedName, comment);
-
-        // Bersihkan input komentar
-        commentInput.value = '';
-      }
-    }
-
-    function saveComment(name, comment) {
-      // Dapatkan komentar yang sudah ada dari local storage
-      var existingComments = JSON.parse(localStorage.getItem('comments')) || [];
-
-      // Tambahkan komentar baru
-      existingComments.push({ name: name, comment: comment });
-
-      // Simpan komentar yang sudah diperbarui kembali ke local storage
-      localStorage.setItem('comments', JSON.stringify(existingComments));
-    }
-
-    function loadComments() {
-      // Memuat komentar dari local storage
-      var existingComments = JSON.parse(localStorage.getItem('comments')) || [];
-
-      // Menampilkan komentar di halaman
-      var commentContainer = document.getElementById('comments');
-      existingComments.forEach(function (item) {
-        var newComment = document.createElement('div');
-        newComment.className = 'comment';
-        newComment.innerHTML = '<strong>' + item.name + ':</strong> ' + item.comment;
-        commentContainer.appendChild(newComment);
-      });
-    }
-  </script>
-
 </body>
 
 </html>
