@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="More.css">
+  <title>profil By me</title>
+
+</head>
+
+<body>
+
+  <!-- Navbar-->
+  <nav class="navbar navbar-dark" style="background-color: #000666;">
+    <a class="navbar-brand" href="#"><b>Profil By Me</title>
+    </b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="Home.html">Beranda <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sosmed.html">Sosial Media</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Card -->
+  <div class="container mt-4">
+    <div class="card shadow">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <!-- Foto -->
+          <img src="cardimg.jpeg" class="card-img img-fluid" alt="Contoh Gambar">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <!-- Tombol -->
+            <div class="btn-group d-flex" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary btn-block" onclick="showStart()"><b>Mulai</b></button>
+              <button type="button" class="btn btn-secondary btn-block" onclick="showProfilContent()">Profil</button>
+              <button type="button" class="btn btn-secondary btn-block" onclick="showHobbyContent()">Hobi</button>
+              <button type="button" class="btn btn-secondary btn-block"
+                onclick="showPrestasiContent()">Prestasi</button>
+            </div>
+            <!-- Sambutan -->
+            <div class="card-text" id="cardContent">
+              <br>
+              <h4>Selamat Datang</h4>
+              <p>Selamat datang di web pribadi Cristiano Ronaldo! Di sini kamu akan menemukan informasi menarik tentang
+                kehidupan dan karier saya sebagai salah satu pemain sepak bola terbaik di dunia. Terima kasih telah
+                mengunjungi web saya!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kolom Chat -->
+    <div class="container mt-4">
+      <!-- Kotak Chat -->
+      <div class="chat-box">
+        <h4>Chat</h4>
+        <div id="comments"></div>
+        <form id="commentForm">
+          <div class="form-group">
+            <label for="nameInput">Nama Kamu:</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="Masukkan nama kamu">
+          </div>
+          <div class="form-group">
+            <label for="commentInput">Komentar Kamu:</label>
+            <textarea class="form-control" id="commentInput" rows="2" placeholder="Masukkan komentar kamu"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="addComment()">Tambah Komentar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar Bawah -->
+  <div class="footer">
+    <p>Dibuat Oleh:
+      <br>Muhammad Farid Bayu Hadi (2200016048)
+      <br>Kerfin Aprian (2200016030)
+    </p>
+  </div>
+
+  <!-- Bootstrap dan Import JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Fungsi JavaScript untuk Tombol -->
+  <script>
+    function changeContent(content) {
+      document.getElementById('cardContent').innerHTML = content;
+    }
+
+    function showStart() {
+      var start = `<h4>Selamat Datang</h4>
+                          <p>Selamat datang di web pribadi Cristiano Ronaldo! Di sini kamu akan menemukan informasi menarik tentang kehidupan dan karier saya sebagai salah satu pemain sepak bola terbaik di dunia. Terima kasih telah mengunjungi web saya! </p>`;
+      document.getElementById('cardContent').innerHTML = start;
+    }
+
+    function showProfilContent() {
+      var Profil = `<h4>Profil </h4>
+      <p>
+      <ul>
+         <li><b>Nama:</b> Cristiano Ronaldo</li>
+        <li><b>Tanggal Lahir:</b> 5 Februari 1985</li>
+        <li><b>Asal:</b> Funchal, Madeira, Portugal</li>
+        <li><b>Pekerjaan:</b> Pemain sepak bola profesional</li>
+        <li><b>Status Nikah:</b> Sudah menikah dengan Georgina Rodriguez</li>
+    </ul>
+</p>`;
+      document.getElementById('cardContent').innerHTML = Profil;
+    }
+
+    function showHobbyContent() {
+      var Hobby = `<h4>Hobi</h4>
+                          <p>Sepak bola tentu menjadi hobi utama saya. Selain itu, saya juga menyukai berbagai aktivitas fisik seperti berenang dan berlari. Saya juga sangat tertarik dalam hal fashion dan memiliki bisnis pakaian sendiri. Selain itu, saya juga senang menghabiskan waktu bersama keluarga dan teman-teman saya.</p>`;
+      document.getElementById('cardContent').innerHTML = Hobby;
+    }
+
+    function showPrestasiContent() {
+      var PrestasiContent = `<h4>Prestasi</h4>
+                            <ul>
+                              <li>Pemenang 5 kali Ballon d'Or (2008, 2013, 2014, 2016, 2017)</li>
+                              <li>Pencetak gol terbanyak sepanjang masa di Liga Champions UEFA</li>
+                              <li>Pemenang 7 kali gelar Liga Champions UEFA (4 kali bersama Real Madrid, 3 kali bersama Manchester United)</li>
+                              <li>Pemenang 4 kali gelar Piala Dunia Antarklub FIFA</li>
+                              <li>Pencetak gol terbanyak sepanjang masa untuk tim nasional Portugal</li>
+                            </ul>`;
+      document.getElementById('cardContent').innerHTML = PrestasiContent;
+    }
+  </script>
+
+  <!-- Fungsi JavaScript untuk Komentar -->
+  <script>
+    var selectedName = ""; // Variable untuk menyimpan nama yang dipilih
+
+    // Memuat komentar dari local storage saat halaman dimuat
+    window.onload = function () {
+      loadComments();
+    };
+
+    function selectName() {
+      var nameInput = document.getElementById('nameInput');
+      selectedName = nameInput.value.trim();
+    }
+
+    function addComment() {
+      var commentInput = document.getElementById('commentInput');
+
+      var comment = commentInput.value.trim();
+
+      if (selectedName !== '' && comment !== '') {
+        var commentContainer = document.getElementById('comments');
+        var newComment = document.createElement('div');
+        newComment.className = 'comment';
+        newComment.innerHTML = '<strong>' + selectedName + ':</strong> ' + comment;
+        commentContainer.appendChild(newComment);
+
+        // Simpan komentar ke local storage
+        saveComment(selectedName, comment);
+
+        // Bersihkan input komentar
+        commentInput.value = '';
+      }
+    }
+
+    function saveComment(name, comment) {
+      // Dapatkan komentar yang sudah ada dari local storage
+      var existingComments = JSON.parse(localStorage.getItem('comments')) || [];
+
+      // Tambahkan komentar baru
+      existingComments.push({ name: name, comment: comment });
+
+      // Simpan komentar yang sudah diperbarui kembali ke local storage
+      localStorage.setItem('comments', JSON.stringify(existingComments));
+    }
+
+    function loadComments() {
+      // Memuat komentar dari local storage
+      var existingComments = JSON.parse(localStorage.getItem('comments')) || [];
+
+      // Menampilkan komentar di halaman
+      var commentContainer = document.getElementById('comments');
+      existingComments.forEach(function (item) {
+        var newComment = document.createElement('div');
+        newComment.className = 'comment';
+        newComment.innerHTML = '<strong>' + item.name + ':</strong> ' + item.comment;
+        commentContainer.appendChild(newComment);
+      });
+    }
+  </script>
+
+</body>
+
+</html>

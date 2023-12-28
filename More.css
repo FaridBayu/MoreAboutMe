@@ -1,0 +1,76 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    background-image: url('https://img.freepik.com/free-vector/abstact-hexagon-background-memphis-style_1017-31955.jpg?w=826&t=st=1703065808~exp=1703066408~hmac=6e3c64191f0d41325c1cb18563c850988554a8243e27c099a1d471c9b579766d');
+    background-size: cover;
+    /* Menyesuaikan gambar untuk mencakup seluruh halaman */
+    background-repeat: no-repeat;
+    /* Menghindari pengulangan gambar */
+    background-attachment: fixed;
+    /* Membuat gambar tetap terlihat saat halaman di-scroll */
+  }
+  
+  
+  .btn-group button {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .card {
+    margin-top: 4rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    color: #333;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+  }
+  
+  
+
+  
+  .activities-box {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  .activities-box h4 {
+    color: #333;
+  }
+  .chat-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px; /* Added border-radius */
+    background-color: #fff; /* Added background color */
+  }
+
+  .comment {
+    margin-bottom: 10px;
+  }
+
+.footer {
+  color: white;
+  background-color: #000666;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  bottom: 0; 
+  width: 100%; 
+}
+  
